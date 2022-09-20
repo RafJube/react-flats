@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 
 import flats from '../../data/flats';
+import keys from '../../private';
 import FlatList from './flat-list';
 import Marker from './marker';
 
@@ -35,7 +36,7 @@ class App extends Component {
         />
         <div className="map-container">
           <GoogleMapReact
-            bootstrapURLKeys={{ key:"AIzaSyAZd7OmFeoanogWpTRh5uxa6-W-xjweKCU" }}
+            bootstrapURLKeys={{ key: keys.map_key }}
             center={this.center()}
             defaultZoom={12}>
             <Marker
